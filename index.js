@@ -26,8 +26,10 @@ $(function () {
             names += $(elm).val() + '、';
         })
         names = names.slice(0, -1);
+        course = $('select[name="course"]').val();
 
-        var msg = `希望日：${date}\n人数：${number}\n氏名：${names}`;
+        //var msg = `希望日：${date}\n人数：${number}\n氏名：${names}`;
+        var msg = `${date}\n${number}\n${names}\n${course}`;
         sendText(msg);
 
         return false;
