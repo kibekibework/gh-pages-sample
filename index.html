@@ -15,7 +15,7 @@
 
         <p class="mt-3">以下に予約情報を入力して送信ボタンを押してください！</p>
 
-        <p class="mt-3">希望日123</p>
+        <p class="mt-3">希望日</p>
         <div>
             <input class="form-control" name="date" maxlength="10">
         </div>
@@ -42,6 +42,17 @@
         <p class="mt-3">氏名</p>
         <div id="form-name">
             <input class="form-control w-100 mt-1" name="name" maxlength="10">
+        </div>
+        
+        <p class="mt-3">コース</p>
+        <div>
+            <select class="form-control w-100 mt-1" name="course" required>
+                <option value="コース1">コース1</option>
+                <option value="コース2">コース2</option>
+                <option value="コース3">コース3</option>
+                <option value="コース4">コース4</option>
+                <option value="コース5">コース5</option>
+            </select>
         </div>
 
         <input type="submit" class="mt-4 btn btn-primary" value="送信">
