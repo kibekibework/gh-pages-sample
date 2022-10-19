@@ -44,10 +44,16 @@ function sendMessages(text) {
 
 // Webブラウザからメッセージ送信
 function shareTargetPicker(text) {
+	if (liff.isApiAvailable('shareTargetPicker')) {
+
     liff.shareTargetPicker([{
         'type': 'text',
         'text': text
     }]).catch(function (error) {
         window.alert('Failed to send message ' + error);
     });
+    } else {
+	//「シェアターゲットピッカー」が無効になっている場合
+            document.getElementById('shareTargetPickerMessage').innerHTML = "<div>Share target picker unavailable.<div><div>This is possibly because you haven't enabled the share target picker on <a href='https://developers.line.biz/console/'>LINE Developers Console</a>.</div>";
+	}
 }
