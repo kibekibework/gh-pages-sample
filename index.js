@@ -30,6 +30,7 @@ $(function () {
 
         //var msg = `希望日：${date}\n人数：${number}\n氏名：${names}`;
         var msg = `${date}\n${number}\n${names}\n${course}`;
+        alert(msg);
         sendText(msg);
 
         return false;
